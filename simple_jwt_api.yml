@@ -1,15 +1,16 @@
-apiVersion: v1
-kind: Service
-metadata:
-  name: simple-jwt-api
-spec:
-  type: LoadBalancer
-  ports:
-    - port: 80
-      targetPort: 8080
-  selector:
-    app: simple-jwt-api
+# apiVersion: v1
+# kind: Service
+# metadata:
+#   name: simple-jwt-api
+# spec:
+#   type: LoadBalancer
+#   ports:
+#     - port: 80
+#       targetPort: 8080
+#   selector:
+#     app: simple-jwt-api
 ---
+
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -30,11 +31,11 @@ spec:
         app: simple-jwt-api
     spec:
       containers:
-        - name: simple-jwt-api
-          image: flask-image-first
-          securityContext:
+      - name: simple-jwt-api
+        image: simple-jwt-api
+        securityContext:
             privileged: false
             readOnlyRootFilesystem: false
             allowPrivilegeEscalation: false
-          ports:
-            - containerPort: 8080
+        ports:
+        - containerPort: 8080
