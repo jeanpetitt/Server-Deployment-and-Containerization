@@ -20,9 +20,9 @@ spec:
         app: simple-flask
     spec:
       containers:
-      - name: flask-image-first
+      - name: simple-flask
         # image: IMAGE_TAG
-        image: flask-image-first
+        image: jeanpetit/simple-flask
         securityContext:
           privileged: false
           readOnlyRootFilesystem: false
