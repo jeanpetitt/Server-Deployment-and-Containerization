@@ -24,7 +24,7 @@ Parameters:
 
   GitBranch:
     Type: String
-    Default: main
+    Default: master
     Description: GitHub git repository branch - change triggers a new build
     MinLength: 1
     MaxLength: 100
