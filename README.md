@@ -69,8 +69,8 @@ cd cd0157-Server-Deployment-and-Containerization/
 ├── main.py
 ├── requirements.txt
 ├── simple_jwt_api.yml
-├── test_main.py  #ToDo
-└── trust.json     #ToDo 
+├── test_main.py  
+└── trust.json    
 ```
 
      
